@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>mapViz demo</title>
+    <style type="text/css">
+
+        body{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            overflow: hidden;
+            height: 100%;
+            max-height: 100%;
+        }
+
+        #framecontent{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 200px; /*Width of frame div*/
+            height: 100%;
+            overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/
+            background: navy;
+            color: white;
+        }
+
+        #maincontent{
+            position: fixed;
+            top: 0;
+            left: 200px; /*Set left value to WidthOfFrameDiv*/
+            right: 0;
+            bottom: 0;
+            overflow: auto;
+            background: #fff;
+        }
+
+        .innertube{
+            margin: 15px; /*Margins for inner DIV inside each DIV (to provide padding)*/
+        }
+
+    </style>
+
+    <script type="text/javascript" src="lib/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="lib/mapViz.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+       function drawMap(){
+                "use strict";
+                document.title = "# of completed solar installations by county: d3 map";
+
+                var mapperOptions = {
+                    sourceType : "json",
+                    level : "county",
+                    source: "../solardata/installationCountByCounty.json",
+                    jsonWrapperObjectName: "installationCountByCounty",
+                    jsonPropertyNameForArea: "county",
+                    jsonPropertyNameForQuantity: "count",
+                    colorScheme: "orange",
+                    legendTitle: "# of solar installations"
+                };
+
+                $(".map-placeholder").mapViz(mapperOptions);
+        }
+    </script>
+
+</head>
+
+<body>
+
+<div id="framecontent">
+    <div class="innertube">
+
+        <h1>mapViz.js examples</h1>
+        <h3>unemployment numbers</h3>
+
+    </div>
+</div>
+
+
+<div id="maincontent">
+    <div class="innertube">
+
+        <h1>unemployment numbers</h1>
+
+        <p>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    drawMap();
+                });
+            </script>
+        </p>
+
+    </div>
+</div>
+
+
+</body>
+</html>
