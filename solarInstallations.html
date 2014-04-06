@@ -14,17 +14,17 @@
     <script type="text/javascript">
         function drawMap(){
             "use strict";
-            document.title = "Unemployment Rates by County (December 2013)";
+            document.title = "# of completed solar installations by county: d3 map";
 
             var mapperOptions = {
-                sourceType: "csv",
-                level: "county",
-                csvColIndexForLevel: 0,
-                csvColIndexForCount: 5,
-                csvHasHeader: true,
-                source: "data/county_unemployment_rates.csv",
-                colorScheme: "purple",
-                legendTitle: "unemployment rate (%)"
+                sourceType : "json",
+                level : "county",
+                source: "data/installation_count_by_county.json",
+                jsonWrapperObjectName: "installationCountByCounty",
+                jsonPropertyNameForArea: "county",
+                jsonPropertyNameForQuantity: "count",
+                colorScheme: "orange",
+                legendTitle: "# of solar installations"
             };
 
             $(".map-placeholder").mapviz(mapperOptions);
@@ -49,7 +49,7 @@
 
 
 <div id="maincontent">
-    <div class="blackbackground maptitle">Unemployment Rates</div>
+    <div class="blackbackground maptitle"># of Solar Installations</div>
     <div class="map-placeholder"></div>
 
 </div>
