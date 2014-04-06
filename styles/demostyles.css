@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    height: 100%;
+    max-height: 100%;
+}
+
+#framecontent{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 200px; /*Width of frame div*/
+    height: 100%;
+    overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/
+    background: black;
+    color: #80c342;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.innerframe {
+    margin: 10px;
+    background: black;
+}
+
+.blackbackground {
+    background: #000000;
+}
+
+#maincontent{
+    position: fixed;
+    top: 0;
+    left: 200px; /*Set left value to WidthOfFrameDiv*/
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background: #fff;
+}
+
+.niceblackgradient {
+    background: #444444;
+    background: -moz-linear-gradient(top, #444444 1%, #111111 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#444444), color-stop(100%,#111111));
+    background: -webkit-linear-gradient(top, #444444 1%,#111111 100%);
+    background: -o-linear-gradient(top, #444444 1%,#111111 100%);
+    background: -ms-linear-gradient(top, #444444 1%,#111111 100%);
+    background: linear-gradient(to bottom, #444444 1%,#111111 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', endColorstr='#111111',GradientType=0 );
+    -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+    clear: both;
+    display: block;
+    float: left;
+    margin: 0 auto;
+    width: 100%;
+    border-bottom: 1px solid #333;
+}
+
+a {
+    color: #eee;
+    font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bolder;
+    margin: 15px;
+    text-decoration: none;
+}
+
+a:link    {color:#80c342;}
+a:visited {color:green;}
+a:hover   {color:#eee;}
+a:active  {color:#eee;}
+
+body, input, textarea {
+    color: #eee;
+    font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 300;
+    line-height: 1.625;
+    font-weight: 300;
+    line-height: 1.625;
+}
+
+.maptitle {
+    font-size: 3em;
+    color: #80c342;
+    padding-left: 10px;
+}

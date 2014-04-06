@@ -12,22 +12,22 @@
     <script src="http://d3js.org/topojson.v1.min.js"></script>
 
     <script type="text/javascript">
-       function drawMap(){
-           "use strict";
-           document.title = "Unemployment Rates by County (December 2013)";
+        function drawMap(){
+            "use strict";
+            document.title = "Unemployment Rates by County (December 2013)";
 
-           var mapperOptions = {
-               sourceType: "csv",
-               level: "county",
-               csvColIndexForLevel: 0,
-               csvColIndexForCount: 5,
-               csvHasHeader: true,
-               source: "data/county_unemployment_rates.csv",
-               colorScheme: "purple",
-               legendTitle: "unemployment rate (%)"
-           };
+            var mapperOptions = {
+                sourceType: "csv",
+                level: "county",
+                csvColIndexForLevel: 0,
+                csvColIndexForCount: 5,
+                csvHasHeader: true,
+                source: "data/county_unemployment_rates.csv",
+                colorScheme: "purple",
+                legendTitle: "unemployment rate (%)"
+            };
 
-           $(".map-placeholder").mapviz(mapperOptions);
+            $(".map-placeholder").mapviz(mapperOptions);
         }
     </script>
 
@@ -36,21 +36,21 @@
 <body>
 
 <div id="framecontent">
-   <div class="innerframe">
+    <div class="innerframe">
         <h1>mapviz.js examples</h1>
         <div class="niceblackgradient">
             <a href="index.html">Unemployment Rates</a>
         </div>
         <div class="niceblackgradient">
-           <a href="solarInstallations.html">Solar Installations</a>
+            <a href="solarInstallations.html">Solar Installations</a>
         </div>
-   </div>
+    </div>
 </div>
 
 
 <div id="maincontent">
-         <div class="blackbackground maptitle">Unemployment Rates</div>
-        <div class="map-placeholder"></div>
+    <div class="blackbackground maptitle">Unemployment Rates</div>
+    <div class="map-placeholder"></div>
 
 </div>
 
