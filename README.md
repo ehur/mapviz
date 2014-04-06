@@ -1,6 +1,7 @@
 mapviz.js plugin for jquery.
 To run this example:
 git clone git@github.com:ehur/mapviz.git
+
 python -m SimpleHTTPServer
 
 navigate to localhost:8000
