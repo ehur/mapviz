@@ -10,16 +10,21 @@ Usage: see the drawMap() functions in index.html and solarInstallations.html for
 
 
 To use the plugin in your own code you will need from this repo:
-   lib/mapviz.js //the plugin itself
-   styles/mapvizstyles.css //styles required for the map legend
-   data/ca_counties_name.json //topojson for California counties
+
+-   lib/mapviz.js //the plugin itself
+-   styles/mapvizstyles.css //styles required for the map legend
+-   data/ca_counties_name.json //topojson for California counties
+
 (todo: a future release will hopefully bundle both the style and the json into the plugin, so the extra files won't be needed.)
 
+
 And you'll need includes for:
-   jquery
-   underscore
-   d3.v3
-   topojson
+
+-   jquery
+-   underscore
+-   d3.v3
+-   topojson
+
 
 for example:
 
